@@ -1,0 +1,7 @@
+INSERT INTO robu8097.itraukia VALUES('97145', DEFAULT, '2022-12-13', '2022-12-16')
+INSERT INTO robu8097.itraukia VALUES('97145', DEFAULT, '2022-10-01', '2022-10-02')
+
+UPDATE robu8097.itraukia SET Galiojimo_pradzia = '2022-10-22', Galiojimo_pabaiga = '2022-10-24' WHERE Sutartis = '97135' AND Kambarys = DEFAULT
+
+INSERT INTO robu8097.itraukia VALUES('11111', DEFAULT, '2022-12-10', '2022-12-14');
+INSERT INTO robu8097.itraukia VALUES('48641', DEFAULT, '2022-08-17', '2022-08-22');
