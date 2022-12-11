@@ -10,4 +10,6 @@ AS      SELECT ID, Kambarys
 CREATE MATERIALIZED VIEW robu8097.sudarytos_sutartys(Vardas, Pavarde, ID, Bendra_kaina)
 AS      SELECT  Vardas, Pavarde, ID, Bendra_kaina
         FROM    robu8097.klientas, robu8097.sutartis
-WITH DATA;
+        WHERE   robu8097.sutartis.klientas = robu8097.klientas.AK;
+
+REFRESH MATERIALIZED VIEW sudarytos_sutartys; 

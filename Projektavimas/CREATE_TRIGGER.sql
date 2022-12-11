@@ -24,9 +24,11 @@ CREATE FUNCTION KambariuKiekis()
 RETURNS TRIGGER
 AS
 'BEGIN
-IF(SELECT COUNT (Kambarys) FROM robu8097.itraukia
+IF(SELECT COUNT(Kambarys)
+    FROM robu8097.itraukia, robu8097.sutartis
     WHERE robu8097.itraukia.Sutartis = NEW.Sutartis
-    AND robu8097.itraukia.Kambarys = NEW.Kambarys) >= 3
+    AND robu8097.itraukia.Sutartis = robu8097.sutartis.ID
+    ) >= 2
 THEN
     RAISE EXCEPTION ''Negalima užsakyti daugiau kambarių!'';
 END IF;
@@ -35,6 +37,6 @@ END'
 LANGUAGE plpgsql;
 
 CREATE TRIGGER KambariuKiekisSutartyje
-AFTER INSERT OR UPDATE ON robu8097.itraukia
+BEFORE INSERT OR UPDATE ON robu8097.itraukia
 FOR EACH ROW
 EXECUTE PROCEDURE KambariuKiekis();

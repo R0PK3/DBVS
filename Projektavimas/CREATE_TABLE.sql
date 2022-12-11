@@ -45,9 +45,9 @@ CREATE TABLE robu8097.itraukia (
     Sutartis            CHAR(5)         NOT NULL,
     Kambarys            SERIAL          NOT NULL,
     Galiojimo_pradzia   DATE            DEFAULT (CURRENT_DATE),
-    Galiojimo_pabaiga   DATE            DEFAULT (DATEADD(day,3,CURRENT_DATE)),
+    Galiojimo_pabaiga   DATE            DEFAULT (CURRENT_DATE + INTERVAL '3 day'),
 
-    PRIMARY KEY (Sutartis, Kambarys)
+    PRIMARY KEY (Sutartis, Kambarys),
     FOREIGN KEY (Sutartis)  REFERENCES robu8097.sutartis(ID) ON DELETE CASCADE ON UPDATE RESTRICT, 
     FOREIGN KEY (Kambarys)  REFERENCES robu8097.kambarys(NR) ON DELETE RESTRICT ON UPDATE RESTRICT 
 );

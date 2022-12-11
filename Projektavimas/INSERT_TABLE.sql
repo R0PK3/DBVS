@@ -13,7 +13,7 @@ INSERT INTO robu8097.kambarys VALUES(DEFAULT, 'Paprastas', 50);
 INSERT INTO robu8097.kambarys VALUES(DEFAULT, 'Vidutinis', 100);
 INSERT INTO robu8097.kambarys VALUES(DEFAULT, 'Prabangus', 300);
 INSERT INTO robu8097.kambarys VALUES(DEFAULT, 'Prabangus', 250);
-INSERT INTO robu8097.kambarys VALUES(DEFAULT, 'Vidutins', 130);
+INSERT INTO robu8097.kambarys VALUES(DEFAULT, 'Vidutinis', 130);
 INSERT INTO robu8097.kambarys VALUES(DEFAULT, 'Paprastas', 50);
 INSERT INTO robu8097.kambarys VALUES(DEFAULT, 'Vidutinis', 200);
 
@@ -27,4 +27,3 @@ INSERT INTO robu8097.itraukia VALUES('11111', DEFAULT, '2022-10-23', '2022-10-25
 INSERT INTO robu8097.itraukia VALUES('48641', DEFAULT, '2022-12-10', '2022-12-14');
 INSERT INTO robu8097.itraukia VALUES('97135', DEFAULT, '2022-09-01', '2022-09-19');
 INSERT INTO robu8097.itraukia VALUES('97135', DEFAULT, '2022-09-01', '2022-09-19');
-
